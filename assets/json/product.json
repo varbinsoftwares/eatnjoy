@@ -1,0 +1,83 @@
+{
+    "1": {
+        "id": "1",
+        "title": "OC001", 
+        "imagename": "2498", 
+        "decription": "",
+        "sort_description": "VENDETTA PREMIUM NAVY WIDE CHALKSTRIPE SUIT",
+        "price":"810",
+        "related":["5","2","3"]
+    },
+    "2": {
+        "id": "2",
+        "title": "OC002",
+        "imagename": "37101",
+        "decription": "",
+        "sort_description": "PREMIUM LIGHT GREY CHALKSTRIPE 150S SUIT",
+        "price":"725",
+        "related":["3","5","4"]
+    },
+    "3": {
+        "id": "3",
+        "title": "OC003",
+        "imagename": "44399",
+        "decription": "",
+        "sort_description": "BLUE CHECK SUIT",
+        "price":"852",
+        "related":["5","4","3"]
+    },
+    "4": {
+        "id": "4",
+        "title": "OC004",
+        "imagename": "834104",
+        "decription": "",
+        "sort_description": "CHECK WOOL & LINEN SUIT ",
+        "price":"798",
+        "related":["3","5","2"]
+    },
+    "5": {
+        "id": "5",
+        "title": "OC005",
+        "imagename": "954105",
+        "decription": "",
+        "sort_description": "BLUE CHECK SUIT",
+        "price":"730",
+        "related":["4","6","7"]
+    },
+    "6": {
+        "id": "6",
+        "title": "OC006",
+        "imagename": "218106",
+        "decription": "",
+        "sort_description": "VENDETTA PREMIUM GREY & AQUA PLAID SUIT",
+        "price":"800",
+        "related":["4","5","8"]
+    },
+    "7": {
+        "id": "7",
+        "title": "OC007",
+        "imagename": "56696",
+        "decription": "",
+        "sort_description": "BLUE NATURAL STRETCH WOOL SUIT",
+        "price":"752",
+        "related":["3","4","5"]
+    },
+    "8": {
+        "id": "8",
+        "title": "OC008",
+        "imagename": "119100",
+        "decription": "",
+        "sort_description": "PREMIUM GRAY PINSTRIPE SUIT",
+        "price":"720",
+        "related":["4","6","7"]
+    },
+    "9": {
+        "id": "9",
+        "title": "OC008",
+        "imagename": "560103",
+        "decription": "",
+        "sort_description": "FINE CHECK KAHKI SUIT",
+        "price":"830",
+        "related":["3","2","5"]
+    }
+}

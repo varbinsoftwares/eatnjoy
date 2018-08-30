@@ -1,0 +1,87 @@
+{
+    "1": {
+        "id": "1",
+        "title": "OC001", 
+        "imagename": "2498", 
+        "decription": "",
+        "sort_description": "VENDETTA PREMIUM NAVY WIDE CHALKSTRIPE SUIT",
+        "price": "810",
+        "related": ["5", "2", "3"],
+        "stype": "suit",
+        "link": "shop-detail",
+        "imagepath": "img/suitimages/",
+        "img1": "_c00011",
+        "img2": "_c_m0001"
+    },
+    "2": {
+        "id": "2",
+        "title": "OC002",
+        "imagename": "37101",
+        "decription": "",
+        "sort_description": "PREMIUM LIGHT GREY CHALKSTRIPE 150S SUIT",
+        "price": "725",
+        "related": ["3", "5", "4"],
+        "stype": "suit",
+        "link": "shop-detail",
+        "imagepath": "img/suitimages/",
+        "img1": "_c00011",
+        "img2": "_c_m0001"
+    },
+    "3": {
+        "id": "3",
+        "title": "OC003",
+        "imagename": "44399",
+        "decription": "",
+        "sort_description": "BLUE CHECK SUIT",
+        "price": "852",
+        "related": ["5", "4", "3"],
+        "stype": "suit",
+        "link": "shop-detail",
+        "imagepath": "img/suitimages/",
+        "img1": "_c00011",
+        "img2": "_c_m0001"
+    },
+
+    "5": {
+        "id": "5",
+        "title": "OCS005",
+        "imagename": "WF81",
+        "decription": "",
+        "sort_description": "BLUE CHECK SUIT",
+        "price": "730",
+        "related": ["4", "6", "7"],
+        "stype": "shirt",
+        "link": "shop-detail-shirt",
+        "imagepath": "http://api.octopuscart.com/output/",
+        "img1": "/shirt0001",
+        "img2": "/cloth0001"
+    },
+    "6": {
+        "id": "6",
+        "title": "OCS006",
+        "imagename": "AM64A",
+        "decription": "",
+        "sort_description": "VENDETTA PREMIUM GREY & AQUA PLAID SUIT",
+        "price": "800",
+        "related": ["4", "5", "8"],
+        "stype": "shirt",
+        "link": "shop-detail-shirt",
+        "imagepath": "http://api.octopuscart.com/output/",
+        "img1": "/shirt0001",
+        "img2": "/cloth0001"
+    },
+    "7": {
+        "id": "7",
+        "title": "OCS007",
+        "imagename": "B3061",
+        "decription": "",
+        "sort_description": "BLUE NATURAL STRETCH WOOL SUIT",
+        "price": "752",
+        "related": ["3", "4", "5"],
+        "stype": "shirt",
+        "link": "shop-detail-shirt",
+        "imagepath": "http://api.octopuscart.com/output/",
+        "img1": "/shirt0001",
+        "img2": "/cloth0001"
+    }
+}
