@@ -242,6 +242,39 @@ class Account extends CI_Controller {
 
         $this->load->view('Account/address', $data);
     }
+    
+    
+      //Address management
+    function daily_menu() {
+        $manu_details_evening = $this->User_model->menu_details('Evening');
+        $data['manu_details_evening'] = $manu_details_evening;
+        
+        $manu_details_morning = $this->User_model->menu_details('Morning');
+        $data['manu_details_morning'] = $manu_details_morning;
+
+
+        //add New address
+        if (isset($_POST['add_menu'])) {
+
+            $category_array = array(
+                'menu_59' => $this->input->post('menu_59'),
+                'menu_49' => $this->input->post('menu_49'),
+                'menu_39' => $this->input->post('menu_39'),
+                'menu_sift' => $this->input->post('menu_sift'),
+                'menu_date' => $this->input->post('menu_date'),
+                'remark' => $this->input->post('remark'),
+            );
+            print_r($category_array);
+            $this->db->insert('daily_menu', $category_array);
+            //redirect('Account/daily_menu');
+        }
+
+
+        $this->load->view('Account/daily_menu', $data);
+    }
+    
+    
+    
 
     //function credits
     function credits() {

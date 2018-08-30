@@ -2,6 +2,80 @@
 $this->load->view('layout/header');
 ?>
 <style>
+    
+    .price_tag{
+        font-size: 30px;
+    }
+    .cartbutton{
+        width: 100%;
+        padding: 6px;
+        color: #fff!important;
+    }
+    .noti-check1{
+        background: #f5f5f5;
+        padding: 25px 30px;
+        color: red;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .noti-check1 span{
+        color: red;
+        color: red;
+        width: 111px;
+        float: left;
+        text-align: right;
+        padding-right: 13px;
+    }
+
+    .noti-check1 h6{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .address_block{
+        background: #fff;
+        border: 3px solid #d30603;
+        padding: 5px 10px;
+        height: 150px;
+    }
+    .checkcart {
+        border-radius: 50%;
+        position: absolute;
+        top: -28px;
+        left: -8px;
+        padding: 4px;
+        background: #fff;
+        border: 2px solid green;
+    }
+
+
+    .default{
+        border: 2px solid green;
+    }
+
+    .default{
+        border: 2px solid green;
+    }
+
+    .checkcart i{
+        color: green;
+    }
+
+    .address_button{
+        padding: 4px;
+        bottom: 10px;
+        position: absolute;
+        color: white;
+    }
+
+    .cartdetail_small {
+        float: left;
+        width: 203px;
+    }
+
+</style>
+<style>
     .product_image_back {
         background-size: contain!important;
         background-repeat: no-repeat!important;
@@ -224,23 +298,35 @@ $this->load->view('layout/header');
             </div>
             <div class="row"> 
 
-                <?php
-                foreach ($categories as $key => $value) {
-                    ?>
-                    <!-- Bags -->
-                    <div class="col-sm-4">
-                        <article> 
-
-                            <img class="img-responsive" src="<?php echo base_url(); ?>assets/theme/images/access-img-1.jpg" alt="" >
-                            <div class="position-center-center">
-                                <h6><?php echo $value['category_name']; ?></h6>
-                            </div>
-                            <a href="<?php echo site_url("Product/ProductList/" . $value['id']); ?>" class="btn by">Shop NOW</a> 
-                        </article>
-                    </div>
-                    <?php
-                }
-                ?>
+                <div class="col-sm-4">
+                    <article> 
+                        <img class="img-responsive" src="<?php echo base_url(); ?>/assets/theme/images/backcat.jpg" alt="">
+                        <div class="position-center-center">
+                            <h6>Spacial</h6>
+                            <span class="price_tag">{{59|currency:'Rs.'}}</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="col-sm-4">
+                    <article> 
+                        <img class="img-responsive" src="<?php echo base_url(); ?>/assets/theme/images/backcat.jpg" alt="">
+                        <div class="position-center-center">
+                            <h6>Regular</h6>
+                            <span class="price_tag">{{49|currency:'Rs.'}}</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="col-sm-4">
+                    <article> 
+                        <img class="img-responsive" src="<?php echo base_url(); ?>/assets/theme/images/backcat.jpg" alt="">
+                        <div class="position-center-center">
+                            <h6>Basic</h6>
+                            <span class="price_tag">{{39|currency:'Rs.'}}</span>
+                        </div>
+                    </article>
+                </div>
 
             </div>
         </div>
@@ -297,33 +383,122 @@ $this->load->view('layout/header');
 
             <!-- Heading -->
             <div class="heading-block">
-                <h3>Latest products</h3>
+                <h3>Daily Menu</h3>
                 <hr>
             </div>
             <div class="row"> 
 
-                <?php
-                foreach ($product_home_slider_bottom['home_bottom'] as $key => $value) {
-                    ?>
-                    <!-- Item -->
-                    <div class="col-sm-4">
-                        <article class="shop-artical"> 
-                            <div class="product_image_back" style="background: url(<?php echo imageserver . $value['file_name']; ?>)"></div>
-                            <div class="item-hover">
-                                <div class="up-side">
-                                    <hr class="dotted white">
-                                    <a href="#."><?php echo $value['title']; ?> </a> 
-                                    <span class="price">{{<?php echo $value['price']; ?>|currency:" Rs. "}}</span> 
-                                </div>
-                                <a href="#." class="btn" ng-click="addToCart(<?php echo $value['id']; ?>, 1)">add to cart</a> 
-                                <a href="#." class="btn by">BUY NOW</a> 
-                            </div>
-                        </article>
-                    </div>
+                <div class="col-md-12">
 
-                    <?php
-                }
-                ?>
+                    <div class="noti-check1" style="#f5f5f5">  
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Evening Shift</h4>
+
+                                <?php
+                                if (count($manu_details_evening)) {
+                                    ?>
+                                    <?php
+                                    foreach ($manu_details_evening as $key => $value) {
+                                        ?>
+                                        <h6><?php echo $value['menu_date']; ?></h6>
+
+
+                                        <div class="col-md-12">
+
+                                            <?php if (trim($value['menu_59'])) { ?>
+                                                <div class=" ">
+                                                    Menu 59
+                                                    <p>
+                                                        <?php echo $value['menu_59']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+
+                                            <?php if (trim($value['menu_49'])) { ?>
+                                                <div class=" ">
+                                                    Menu 49
+                                                    <p>
+                                                        <?php echo $value['menu_49']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+
+                                            <?php if (trim($value['menu_39'])) { ?>
+                                                <div class=" ">
+                                                    Menu 39
+                                                    <p>
+                                                        <?php echo $value['menu_39']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+
+                                        <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <h4><i class="fa fa-warning"></i> No Tiffin Available</h4>
+
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Morning Shift</h4>
+                                <?php
+                                if (count($manu_details_morning)) {
+                                    ?>
+                                    <?php
+                                    foreach ($manu_details_morning as $key => $value) {
+                                        ?>
+                                        <h6><?php echo $value['menu_date']; ?> </h6>
+
+
+                                        <div class="col-md-12">
+
+                                            <?php if (trim($value['menu_59'])) { ?>
+                                                <div class=" ">
+                                                    Menu 59
+                                                    <p>
+                                                        <?php echo $value['menu_59']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+
+                                            <?php if (trim($value['menu_49'])) { ?>
+                                                <div class=" ">
+                                                    Menu 49
+                                                    <p>
+                                                        <?php echo $value['menu_49']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+
+                                            <?php if (trim($value['menu_39'])) { ?>
+                                                <div class=" ">
+                                                    Menu 39
+                                                    <p>
+                                                        <?php echo $value['menu_39']; ?>,<br/>
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+
+                                        <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <h4><i class="fa fa-warning"></i> No Tiffin Available</h4>
+
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>                            
+
+                    </div>
+                </div>
 
 
             </div>

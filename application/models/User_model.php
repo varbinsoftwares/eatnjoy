@@ -51,6 +51,17 @@ class User_model extends CI_Model {
         }
     }
 
+    //menu details
+    function menu_details($shift, $ddate) {
+        if($ddate){
+            $this->db->where('menu_date', $ddate);
+        }
+        $this->db->where('menu_sift', $shift);
+        $this->db->order_by('menu_date', 'desc');
+        $query = $this->db->get('daily_menu');
+        return $query->result_array();
+    }
+
     //get user creadit detail by id
     function user_credits($id) {
         $this->db->select('sum(credit) as credits');
