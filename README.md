@@ -1,1 +1,1 @@
-# Shirt Customization by Octopuscart Ltd. 
+Eat n Joy Project
